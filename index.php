@@ -1,4 +1,5 @@
 <?php
+    //index
     include ("functions.php");
     include ("views/header.php");
 
