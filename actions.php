@@ -48,7 +48,7 @@
                     $query="UPDATE `users` SET password='".md5(md5($newkey).$_POST['password'])."' WHERE id=".$newkey." LIMIT 1";
                     $result = mysqli_query($link, $query);                    
 
-                    echo 1;
+                    echo "1";
                 }
             }        
         }else{
@@ -64,7 +64,7 @@
                 $hashedPassword = md5(md5($row["id"]).$_POST['password']);
 
                 if($hashedPassword == $row["password"]){
-                    echo 1;
+                    echo "1";
                     //store id in session variables
                     $_SESSION["id"] = $row["id"];
                 }else{
@@ -96,7 +96,7 @@
             $deleteResult=mysqli_query($link, $deleteQuery);
 
             if (isset($deleteResult)) {
-                echo 1;
+                echo "1";
             }
         }else{
             //FOLLOW THE USER
@@ -107,11 +107,33 @@
             $insertResult=mysqli_query($link, $insertQuery);
             
             if (isset($insertResult)) {
-                echo 2;
+                echo "2";
             }
 
         }
 
     }
+
+    if ($_GET['action'] == "postTweet") {
+        //print_r($_POST);
+
+        if (!$_POST['tweetContent']) {
+            echo "Your Tweet is empty!";
+
+        }else if (strlen($_POST['tweetContent']) > 140 ) {
+            
+            echo "Your tweet is too long!";
+        }else{
+
+            $insertQuery="INSERT INTO tweets (`tweet`, `userid`, `datetime`) VALUES ('"
+                .mysqli_real_escape_string($link, $_POST['tweetContent'])."', "
+                .mysqli_real_escape_string($link, $_SESSION['id']).", NOW())";
+            //echo $insertQuery;
+            $insertResult=mysqli_query($link, $insertQuery);
+
+            echo "1";
+
+        };
+    };
 
 ?>

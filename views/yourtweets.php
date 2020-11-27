@@ -3,9 +3,9 @@
     <div class="row">
         <div class="col-sm-8">
 
-            <h2>Tweets Recientes</h2>
+            <h2>Tus Tweets</h2>
 
-            <?php displayTweets('public');  ?>
+            <?php displayTweets('yourtweets');  ?>
 
         </div>
         <div class="col-sm-4">

@@ -3,9 +3,9 @@
     <div class="row">
         <div class="col-sm-8">
 
-            <h2>Tweets Recientes</h2>
+            <h2>Resultadsos de la busqueda</h2>
 
-            <?php displayTweets('public');  ?>
+            <?php displayTweets('search');  ?>
 
         </div>
         <div class="col-sm-4">

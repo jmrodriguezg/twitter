@@ -6,6 +6,12 @@
 #loginAlert{
     display: none;
 }
+#tweetSuccess{
+    display: none;
+}
+#tweetFail{
+    display: none;
+}
 .mainContainer{
    padding: 20px; 
 }
