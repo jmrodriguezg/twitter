@@ -1,5 +1,5 @@
 <?php
-    //funtions
+    //funtions 
     session_start();
 
     //remote server

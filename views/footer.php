@@ -2,7 +2,7 @@
     <div class="container">
         <p>&copy; My website 2020</p>
     </div>
-</footer> 
+</footer>
 
 <!-- Optional JavaScript; choose one of the two! -->
 
