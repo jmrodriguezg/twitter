@@ -15,7 +15,8 @@
         }else{
             include ("views/home.php");
         }        
-    }else if (isset($_SESSION['id'])){
+    }else{
+        //if (isset($_SESSION['id'])){
         include ("views/home.php");        
     }
 

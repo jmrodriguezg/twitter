@@ -1,6 +1,6 @@
 <footer class="footer mt-auto py-3">
     <div class="container">
-        <p>&copy; My website 2020</p>
+        <p>&copy; <?php echo date("Y"); ?> por Jose M Rodrigues G </p>
     </div>
 </footer>
 
@@ -86,7 +86,8 @@
                 //alert(result);
                 if (result == "1"){
                     //redirect to home already login
-                    window.location.assign("http://localhost/site/twitter/index.php");
+                    //window.location.assign("http://localhost/site/twitter/index.php");
+                    window.location.assign("http://webtotuenti.tech/twitter/index.php");
 
                 }else{
                     $("#loginAlert").html(result).show();

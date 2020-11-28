@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-sm-8">
 
-            <h2>Tweets de a quienes tu sigues (you follow)!</h2>
+            <h2>Tweets de quienes tu sigues (you follow!)</h2>
 
             <?php displayTweets('isFollowing');  ?>
 
